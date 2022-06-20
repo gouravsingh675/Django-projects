@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form action="register" method="post">
+        {% csrf_token %}
+        <label><button type="submit" onclick="return false">First Name</button></label>
+        <input type="text" name="first_name" placeholder="Enter First name">
+        </label>
+        <br />
+        <label><button type="submit" onclick="return false">Last Name</button>
+        <input type="text" name="last_name" placeholder="Enter Last name">
+        </label>
+        <br />
+        <label><button type="submit" onclick="return false">User Name</button>
+        <input type="text" name="user_name" placeholder="Enter user name">
+        </label>
+        <br />
+        <label><button type="submit" onclick="return false">Email</button>
+        <input type="email" name="email" placeholder="Enter email">
+        </label>
+        <br />
+        <label><button type="submit" onclick="return false">Password</button>
+        <input type="password" name="password1" placeholder="Enter password">
+        </label>
+        <br />
+        <label><button type="submit" onclick="return false">Confirm Password</button>
+        <input type="password" name="password2" placeholder="Re-enter password">
+        </label>
+        <br />
+        <input type="Submit">
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
